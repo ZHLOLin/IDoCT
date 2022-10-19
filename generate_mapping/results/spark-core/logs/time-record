@@ -1,0 +1,116 @@
+org.apache.spark.scheduler.DAGSchedulerSuite @ run trivial job w/ dependency 176.82287287712097
+org.apache.spark.scheduler.DAGSchedulerSuite @ [SPARK-3353] parent stage should have lower stage id 181.4834942817688
+org.apache.spark.scheduler.DAGSchedulerSuite @ [SPARK-13902] Ensure no duplicate stages are created 185.01699256896973
+org.apache.spark.scheduler.DAGSchedulerSuite @ All shuffle files on the storage endpoint should be cleaned up when it is lost 174.89951038360596
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32003: All shuffle files for executor should be cleaned up on fetch failure 168.780743598938
+org.apache.spark.scheduler.DAGSchedulerSuite @ zero split job 164.1642394065857
+org.apache.spark.scheduler.DAGSchedulerSuite @ run trivial job 167.28289461135864
+org.apache.spark.scheduler.DAGSchedulerSuite @ equals and hashCode AccumulableInfo 155.15467357635498
+org.apache.spark.scheduler.DAGSchedulerSuite @ cache location preferences w/ dependency 56.231417417526245
+org.apache.spark.scheduler.DAGSchedulerSuite @ regression test for getCacheLocs 164.25138902664185
+org.apache.spark.scheduler.DAGSchedulerSuite @ getMissingParentStages should consider all ancestor RDDs' cache statuses 164.61380887031555
+org.apache.spark.scheduler.DAGSchedulerSuite @ avoid exponential blowup when getting preferred locs list 168.24201941490173
+org.apache.spark.scheduler.DAGSchedulerSuite @ unserializable task 166.8889102935791
+org.apache.spark.scheduler.DAGSchedulerSuite @ trivial job failure 56.479371070861816
+org.apache.spark.scheduler.DAGSchedulerSuite @ trivial job cancellation 165.38721370697021
+org.apache.spark.scheduler.DAGSchedulerSuite @ job cancellation no-kill backend 162.36436796188354
+org.apache.spark.scheduler.DAGSchedulerSuite @ run trivial shuffle 166.86602663993835
+org.apache.spark.scheduler.DAGSchedulerSuite @ run trivial shuffle with fetch failure 164.37330842018127
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle files not lost when executor process lost with shuffle service 56.56171131134033
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle files lost when worker lost with shuffle service 163.4109709262848
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle files lost when worker lost without shuffle service 57.25500178337097
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle files not lost when executor failure with shuffle service 165.14126086235046
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle files lost when executor failure without shuffle service 169.7552947998047
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-28967 properties must be cloned before posting to listener bus for 0 partition 166.11138606071472
+org.apache.spark.scheduler.DAGSchedulerSuite @ Single stage fetch failure should not abort the stage. 168.31676936149597
+org.apache.spark.scheduler.DAGSchedulerSuite @ Multiple consecutive stage fetch failures should lead to job being aborted. 165.1992790699005
+org.apache.spark.scheduler.DAGSchedulerSuite @ Failures in different stages should not trigger an overall abort 56.31922268867493
+org.apache.spark.scheduler.DAGSchedulerSuite @ Non-consecutive stage failures don't trigger abort 164.67189860343933
+org.apache.spark.scheduler.DAGSchedulerSuite @ trivial shuffle with multiple fetch failures 160.94966006278992
+org.apache.spark.scheduler.DAGSchedulerSuite @ Retry all the tasks on a resubmitted attempt of a barrier stage caused by FetchFailure 56.34158945083618
+org.apache.spark.scheduler.DAGSchedulerSuite @ Retry all the tasks on a resubmitted attempt of a barrier stage caused by TaskKilled 168.88578271865845
+org.apache.spark.scheduler.DAGSchedulerSuite @ Fail the job if a barrier ResultTask failed 165.97600555419922
+org.apache.spark.scheduler.DAGSchedulerSuite @ late fetch failures don't cause multiple concurrent attempts for the same map stage 165.089777469635
+org.apache.spark.scheduler.DAGSchedulerSuite @ extremely late fetch failures don't cause multiple concurrent attempts for the same stage 169.61631321907043
+org.apache.spark.scheduler.DAGSchedulerSuite @ task events always posted in speculation / when stage is killed 164.026380777359
+org.apache.spark.scheduler.DAGSchedulerSuite @ ignore late map task completions 169.60405230522156
+org.apache.spark.scheduler.DAGSchedulerSuite @ run shuffle with map stage failure 164.36255145072937
+org.apache.spark.scheduler.DAGSchedulerSuite @ shuffle fetch failure in a reused shuffle dependency 56.898075580596924
+org.apache.spark.scheduler.DAGSchedulerSuite @ don't submit stage until its dependencies map outputs are registered (SPARK-5259) 53.33772802352905
+org.apache.spark.scheduler.DAGSchedulerSuite @ register map outputs correctly after ExecutorLost and task Resubmitted 55.127532958984375
+org.apache.spark.scheduler.DAGSchedulerSuite @ failure of stage used by two jobs 55.85444641113281
+org.apache.spark.scheduler.DAGSchedulerSuite @ stage used by two jobs, the first no longer active (SPARK-6880) 150.64940071105957
+org.apache.spark.scheduler.DAGSchedulerSuite @ stage used by two jobs, some fetch failures, and the first job no longer active (SPARK-6880) 150.8918662071228
+org.apache.spark.scheduler.DAGSchedulerSuite @ run trivial shuffle with out-of-band executor failure and retry 164.64823651313782
+org.apache.spark.scheduler.DAGSchedulerSuite @ recursive shuffle failures 170.86594581604004
+org.apache.spark.scheduler.DAGSchedulerSuite @ cached post-shuffle 169.72891497612
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-30388: shuffle fetch failed on speculative task, but original task succeed 152.56203079223633
+org.apache.spark.scheduler.DAGSchedulerSuite @ misbehaved accumulator should not crash DAGScheduler and SparkContext 58.595356702804565
+org.apache.spark.scheduler.DAGSchedulerSuite @ misbehaved accumulator should not impact other accumulators 56.47336030006409
+org.apache.spark.scheduler.DAGSchedulerSuite @ misbehaved resultHandler should not crash DAGScheduler and SparkContext 55.791783809661865
+org.apache.spark.scheduler.DAGSchedulerSuite @ invalid spark.job.interruptOnCancel should not crash DAGScheduler 169.39827227592468
+org.apache.spark.scheduler.DAGSchedulerSuite @ getPartitions exceptions should not crash DAGScheduler and SparkContext (SPARK-8606) 164.95269131660461
+org.apache.spark.scheduler.DAGSchedulerSuite @ getPreferredLocations errors should not crash DAGScheduler and SparkContext (SPARK-8606) 166.289160490036
+org.apache.spark.scheduler.DAGSchedulerSuite @ accumulator not calculated for resubmitted result stage 161.914057970047
+org.apache.spark.scheduler.DAGSchedulerSuite @ accumulator not calculated for resubmitted task in result stage 55.63437247276306
+org.apache.spark.scheduler.DAGSchedulerSuite @ accumulators are updated on exception failures and task killed 55.73834800720215
+org.apache.spark.scheduler.DAGSchedulerSuite @ reduce tasks should be placed locally with map output 164.19213843345642
+org.apache.spark.scheduler.DAGSchedulerSuite @ reduce task locality preferences should only include machines with largest map outputs 168.80021119117737
+org.apache.spark.scheduler.DAGSchedulerSuite @ stages with both narrow and shuffle dependencies use narrow ones for locality 163.7216513156891
+org.apache.spark.scheduler.DAGSchedulerSuite @ Spark exceptions should include call site in stack trace 166.59086918830872
+org.apache.spark.scheduler.DAGSchedulerSuite @ catch errors in event loop 56.43273401260376
+org.apache.spark.scheduler.DAGSchedulerSuite @ simple map stage submission 164.48121976852417
+org.apache.spark.scheduler.DAGSchedulerSuite @ map stage submission with reduce stage also depending on the data 56.22108221054077
+org.apache.spark.scheduler.DAGSchedulerSuite @ map stage submission with fetch failure 164.33008074760437
+org.apache.spark.scheduler.DAGSchedulerSuite @ map stage submission with multiple shared stages and failures 165.84107279777527
+org.apache.spark.scheduler.DAGSchedulerSuite @ Trigger mapstage's job listener in submitMissingTasks 56.88586163520813
+org.apache.spark.scheduler.DAGSchedulerSuite @ map stage submission with executor failure late map task completions 56.36017847061157
+org.apache.spark.scheduler.DAGSchedulerSuite @ getShuffleDependenciesAndResourceProfiles correctly returns only direct shuffle parents 162.96733212471008
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-17644: After one stage is aborted for too many failed attempts, subsequent stagesstill behave correctly on fetch failures 156.5835497379303
+org.apache.spark.scheduler.DAGSchedulerSuite @ [SPARK-19263] DAGScheduler should not submit multiple active tasksets, even with late completions from earlier stage attempts 151.38148617744446
+org.apache.spark.scheduler.DAGSchedulerSuite @ task end event should have updated accumulators (SPARK-20342) 167.06783413887024
+org.apache.spark.scheduler.DAGSchedulerSuite @ Barrier task failures from the same stage attempt don't trigger multiple stage retries 164.46163535118103
+org.apache.spark.scheduler.DAGSchedulerSuite @ Barrier task failures from a previous stage attempt don't trigger stage retry 165.52095127105713
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-25341: abort stage while using old fetch protocol 165.84481477737427
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-25341: retry all the succeeding stages when the map stage is indeterminate 165.57905411720276
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-25341: continuous indeterminate stage roll back 166.59125661849976
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-29042: Sampled RDD with unordered input should be indeterminate 170.14069938659668
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-23207: cannot rollback a result stage 170.00067806243896
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-23207: local checkpoint fail to rollback (checkpointed before) 165.69851994514465
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-23207: local checkpoint fail to rollback (checkpointing now) 169.8591284751892
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-23207: reliable checkpoint can avoid rollback (checkpointed before) 166.29463410377502
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-23207: reliable checkpoint fail to rollback (checkpointing now) 168.42100358009338
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-27164: RDD.countApprox on empty RDDs schedules jobs which never complete 167.4838263988495
+org.apache.spark.scheduler.DAGSchedulerSuite @ Completions in zombie tasksets update status of non-zombie taskset 165.1075189113617
+org.apache.spark.scheduler.DAGSchedulerSuite @ test default resource profile 165.92151141166687
+org.apache.spark.scheduler.DAGSchedulerSuite @ test 1 resource profile 56.031869411468506
+org.apache.spark.scheduler.DAGSchedulerSuite @ test 2 resource profiles errors by default 169.16805720329285
+org.apache.spark.scheduler.DAGSchedulerSuite @ test 2 resource profile with merge conflict config true 170.67773413658142
+org.apache.spark.scheduler.DAGSchedulerSuite @ test multiple resource profiles created from merging use same rp 170.12358808517456
+org.apache.spark.scheduler.DAGSchedulerSuite @ test merge 2 resource profiles multiple configs 162.2553939819336
+org.apache.spark.scheduler.DAGSchedulerSuite @ test merge 3 resource profiles 158.91014909744263
+org.apache.spark.scheduler.DAGSchedulerSuite @ getShuffleDependenciesAndResourceProfiles returns deps and profiles correctly 166.98905563354492
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: shuffle merge finalization 166.54525709152222
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: merger locations not empty 165.25742554664612
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: merger locations reuse from shuffle dependency 164.14998650550842
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Disable shuffle merge due to not enough mergers available 169.39613008499146
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Ensure child stage should not start before all the parent stages are completed with shuffle merge finalized for all the parent stages 171.5378212928772
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Reused ShuffleDependency with Shuffle Merge disabled for the corresponding ShuffleDependency should not cause DAGScheduler to hang 58.07475733757019
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Reused ShuffleDependency with Shuffle Merge disabled for the corresponding ShuffleDependency with shuffle data loss should recompute missing partitions 56.9454345703125
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Empty RDD should not be computed 58.22160744667053
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Cancelled stage should be marked finalized after the shuffle merge is finalized 163.79050421714783
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: SPARK-35549: Merge results should not get registered after shuffle merge finalization 171.867431640625
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: Disable push based shuffle in the case of a barrier stage 166.04086565971375
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32920: metadata fetch failure should not unregister map status 164.23332047462463
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-32923: handle stage failure for indeterminate map stage with push-based shuffle 165.9099359512329
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-33701: check adaptive shuffle merge finalization triggered after stage completion 165.09437584877014
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-33701: check adaptive shuffle merge finalization triggered after minimum threshold push complete 171.7508134841919
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-33701: check adaptive shuffle merge finalization behavior with stage cancellation for determinate and indeterminate stages during spark.shuffle.push.finalize.timeout wait 164.85085701942444
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-33701: check adaptive shuffle merge finalization with minimum pushes complete after the stage completion replacing the finalize task with delay = 0 57.451746702194214
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-34826: Adaptively fetch shuffle mergers 56.745229959487915
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-34826: Adaptively fetch shuffle mergers with stage retry 167.63670659065247
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-34826: Adaptively fetch shuffle mergers with stage retry for indeterminate stage 167.83597326278687
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-38987: corrupted merged shuffle block FetchFailure should unregister merge results 57.53779053688049
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-38987: All shuffle outputs for a shuffle push merger executor should be cleaned up on a fetch failure whenspark.files.fetchFailure.unRegisterOutputOnHost is true 163.01346516609192
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-40096: Send finalize events even if shuffle merger blocks indefinitely with registerMergeResults is true 170.79827404022217
+org.apache.spark.scheduler.DAGSchedulerSuite @ SPARK-40096: Send finalize events even if shuffle merger blocks indefinitely with registerMergeResults is false 58.13334679603577
