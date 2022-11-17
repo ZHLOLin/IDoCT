@@ -38,8 +38,6 @@ def run_test_batch(param_values, associated_test_map):
         if display_mode:
             os.system(" ".join(cmd))
             continue
-        print(test_str)
-        print(cmd)
         process = Popen(cmd, stdout=PIPE, stderr=PIPE)
         stdout = ""
         stderr = ""

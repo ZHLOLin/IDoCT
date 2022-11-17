@@ -103,7 +103,7 @@ INJECTION_PATH = {
         os.path.join(CTEST_ALLUXIO_DIR, "core/alluxio-ctest.properties")
     ],
     SPARK: [
-        os.path.join(CTEST_SPARK_DIR, "conf/spark-defaults.conf")
+        CTEST_SPARK_DIR
     ]
 }
 

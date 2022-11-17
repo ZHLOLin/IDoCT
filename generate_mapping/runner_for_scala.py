@@ -116,7 +116,9 @@ class Runner:
                 assert line.split(" ")[0] == "[CTEST][SET-PARAM]"
                 assert line.count(" ") == 2, "more than one whitespace in " + line
                 param_name = line.split(" ")[1]
+                print(param_name)
                 if param_name in self.params:
+                    print(line.split(" ")[2])
                     if self.aggressive or self.setInTest(line.split(" ")[2]):
                         is_setter = True
                         self.setter_record.write(method + " param: " + param_name + "\n")
@@ -145,13 +147,18 @@ class Runner:
         json.dump(method_list, json_file)
         json_file.close()
 
-    def write_report(self, src_file, dst_file):
+    def write_report(self, src_file, dst_file, method):
         f_src = open(src_file, "r")
         f_dst = open(dst_file, "w")
         lines = f_src.readlines()
         writed = False
+        test_start = False
+        method_name = method.split(" @ ")[1]
         for line in lines:
-            if "[CTEST][GET-PARAM]" in line or "[CTEST][SET-PARAM]" in line:
+            if "- " + method_name in line:
+                test_start = True
+                print("- " + method_name)
+            if test_start and ("[CTEST][GET-PARAM]" in line or "[CTEST][SET-PARAM]" in line):
                 f_dst.write(line)
                 writed = True
         return writed
@@ -204,16 +211,7 @@ class Runner:
                 self.failure_list.append(method)
                 continue
 
-            # class_name = method.split("#")[0]
-            # suffix_filename_to_check = class_name + "-output.txt"
-            # full_path = self.get_full_report_path(suffix_filename_to_check)
-            # if full_path == "none":
-            #     print("no report for " + method)
-            #     self.no_report_list.append(method)     
-            # else:
-            #     shutil.copy(full_path, method_report_path)
-            #     self.parse(open(full_path, "r").readlines(), method)
-            if self.write_report(log_file_name, method_report_path):
+            if self.write_report(log_file_name, method_report_path, method):
                 self.parse(open(method_report_path, "r").readlines(), method)
             else:
                 print("no report for " + method)
